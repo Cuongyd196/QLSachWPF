@@ -1,0 +1,57 @@
+﻿<Window x:Class="QLSachWPF.InsertWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLSachWPF"
+        mc:Ignorable="d"
+        Title="InsertWindow" Height="350" Width="600" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <TextBlock Margin="10" HorizontalAlignment="Center" Text="Thêm mới dữ liệu" FontSize="14" FontWeight="Bold"></TextBlock>
+
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+    <StackPanel Grid.Column="0" HorizontalAlignment="Center">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock  Width="50" Margin="10" Text="Mã sách"></TextBlock>
+            <TextBox x:Name="txtMaSach" Width="200" Margin="10"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Margin="10" Text="Tên sách"></TextBlock>
+            <TextBox x:Name="txtTenSach" Width="200" Margin="10"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Margin="10" Text="Đơn giá"></TextBlock>
+            <TextBox x:Name="txtDonGia" Width="200" Margin="10"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Margin="10" Text="Số lượng"></TextBlock>
+            <TextBox x:Name="txtSoLuong" Width="200" Margin="10"></TextBox>
+        </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="50" Margin="10" Text="Loại sách"></TextBlock>
+                    <ComboBox 
+                        SelectedIndex="0" 
+                        DisplayMemberPath="TenLoaiSach" 
+                        SelectedValuePath="IDLoaiSach" 
+                        x:Name="cbbLoaiSach" 
+                        Margin="10" >
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock HorizontalAlignment="Center" Text="Ảnh bìa"></TextBlock>
+                <Image Source="https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg" Margin="5"  Width="150"  Height="150"></Image>
+                <Button Margin="5"  Width="100" Content="Upload"></Button>
+        </StackPanel>
+        
+    </Grid>
+        <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Width="70" x:Name="btnLuu"  Margin="5" Content="Lưu" Click="btnLuu_Click"></Button>
+            <Button  Width="70" x:Name="btnThoat" Margin="5" Content="Thoát" Click="Button_Click"></Button>
+        </StackPanel>
+    </StackPanel>
+</Window>
