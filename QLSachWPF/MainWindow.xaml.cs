@@ -28,10 +28,18 @@ namespace QLSachWPF
         {
             InitializeComponent();
             getData();
+            HienThiLoaiSach();
         }
         public void getData()
         {
+            QLSachModel db = new QLSachModel();
+
             dgSach.ItemsSource = db.Saches.ToList();
+        }
+        public void HienThiLoaiSach()
+        {
+            var listLoaiSach = db.LoaiSaches.ToList();
+            cbbLoaiSach.ItemsSource = listLoaiSach;
         }
 
         private void btnThem_Click(object sender, RoutedEventArgs e)
@@ -116,6 +124,12 @@ namespace QLSachWPF
             dgSach.ItemsSource = db.Saches.ToList();
         }
 
-
+        private void cbbLoaiSach_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int idLoaiSach = -1;
+            idLoaiSach = int.Parse(cbbLoaiSach.SelectedValue.ToString());
+            var dataSearch = db.Saches.Where(x => x.IDLoaiSach == idLoaiSach).ToList();
+            dgSach.ItemsSource = dataSearch;
+        }
     }
 }

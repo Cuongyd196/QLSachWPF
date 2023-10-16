@@ -19,7 +19,7 @@ namespace QLSachWPF.Models
         [StringLength(250)]
         public string TenSach { get; set; }
 
-        public int? DonGia { get; set; }
+        public decimal? DonGia { get; set; }
 
         public int? SoLuong { get; set; }
 

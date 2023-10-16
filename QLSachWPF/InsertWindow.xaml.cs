@@ -62,14 +62,12 @@ namespace QLSachWPF
         {
             try
             {
-                // Thêm mới dữ liệu
-                // Lấy dữ liệu từ các ô nhập và chọn tại InsertWindow
+                // Thêm mới dữ liệu     // Lấy dữ liệu từ các ô nhập và chọn tại InsertWindow
                 string maSach = txtMaSach.Text;
                 string tenSach = txtTenSach.Text;
                 int donGia = int.Parse(txtDonGia.Text);
                 int soLuong = int.Parse(txtSoLuong.Text);
                 int loaiSach = int.Parse(cbbLoaiSach.SelectedValue.ToString());
-
                 if (id == -1)
                 {
                     var sach = new Sach();
@@ -83,11 +81,6 @@ namespace QLSachWPF
                     db.SaveChanges();
                     MessageBox.Show("Thêm dữ liệu thành công!", " Thông báo", MessageBoxButton.OKCancel, MessageBoxImage.Information);
                     this.Close();
-                    DataChangedEventHandler handler = DataChanged;
-                    if (handler != null)
-                    {
-                        handler(this, new EventArgs());
-                    }
                 }
                 else
                 {
@@ -101,11 +94,11 @@ namespace QLSachWPF
                     db.SaveChanges();
                     MessageBox.Show("Sửa dữ liệu thành công!", " Thông báo", MessageBoxButton.OKCancel, MessageBoxImage.Information);
                     this.Close();
-                    DataChangedEventHandler handler = DataChanged;
-                    if (handler != null)
-                    {
-                        handler(this, new EventArgs());
-                    }
+                }
+                DataChangedEventHandler handler = DataChanged;
+                if (handler != null)
+                {
+                    handler(this, new EventArgs());
                 }
             }
             catch
