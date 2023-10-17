@@ -23,9 +23,9 @@
             <DataGrid  IsReadOnly="True" SelectionMode="Single" x:Name="dgSach" AutoGenerateColumns="False" Height="280" Margin="5" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="100" Header="Mã sách" Binding="{Binding MaSach}"/>
-                    <DataGridTextColumn Width="300" Header="Tên sách" Binding="{Binding TenSach}"/>
+                    <DataGridTextColumn Width="1*" Header="Tên sách" Binding="{Binding TenSach}"/>
                     <DataGridTextColumn Width="100" Header="Đơn giá" Binding="{Binding DonGia}"/>
-                    <DataGridTextColumn Width="50" Header="Số lượng" Binding="{Binding SoLuong}"/>
+                    <DataGridTextColumn Width="100" Header="Số lượng" Binding="{Binding SoLuong}"/>
                     <DataGridTextColumn Width="100" Header="Loại sách" Binding="{Binding LoaiSach.TenLoaiSach}"/>
                     <DataGridTextColumn Width="100" Header="Ảnh bìa" Binding="{Binding AnhBia}"/>
                 </DataGrid.Columns>

@@ -44,14 +44,15 @@
             </StackPanel>
         <StackPanel Grid.Column="1">
             <TextBlock HorizontalAlignment="Center" Text="Ảnh bìa"></TextBlock>
-                <Image Source="https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg" Margin="5"  Width="150"  Height="150"></Image>
-                <Button Margin="5"  Width="100" Content="Upload"></Button>
+                <Image x:Name="imageSach" Source="https://www.gasso.com/wp-content/uploads/2017/04/noimage.jpg" Margin="5"  Width="150"  Height="150"></Image>
+                <TextBlock x:Name="pathImage" Visibility="Hidden"></TextBlock>
+                <Button Margin="5"  Width="100" Content="Upload" x:Name="btnUpload" Click="btnUpload_Click"></Button>
         </StackPanel>
         
     </Grid>
         <StackPanel Margin="10" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Width="70" x:Name="btnLuu"  Margin="5" Content="Lưu" Click="btnLuu_Click"></Button>
-            <Button  Width="70" x:Name="btnThoat" Margin="5" Content="Thoát" Click="Button_Click"></Button>
+            <Button  Width="70" x:Name="btnThoat" Margin="5" Content="Thoát" Click="btnThoat_Click"></Button>
         </StackPanel>
     </StackPanel>
 </Window>
