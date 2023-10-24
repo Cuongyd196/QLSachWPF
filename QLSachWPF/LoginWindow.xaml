@@ -1,0 +1,22 @@
+﻿<Window x:Class="QLSachWPF.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLSachWPF"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="300" Width="500" WindowStartupLocation="CenterScreen">
+    <StackPanel HorizontalAlignment="Center">
+        <Label HorizontalAlignment="Center" FontWeight="Bold" FontSize="22">ĐĂNG NHẬP ỨNG DỤNG</Label>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label Width="100" Margin="10" Content="Tên đăng nhập"></Label>
+            <TextBox Margin="10" Width="150" x:Name="txtTenDangNhap"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <Label  Width="100" Margin="10" Content="Mật khẩu"></Label>
+            <PasswordBox  Margin="10" Width="150" x:Name="txtMK"></PasswordBox>
+        </StackPanel>
+        <Button x:Name="btnDangNhap" Margin="10"  Width="80" Content="Đăng nhập" Click="btnDangNhap_Click"></Button>
+
+    </StackPanel>
+</Window>

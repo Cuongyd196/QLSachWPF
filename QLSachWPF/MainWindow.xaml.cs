@@ -23,12 +23,26 @@ namespace QLSachWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        int idNguoiDung = -1;
         QLSachModel db = new QLSachModel();
-        public MainWindow()
+        public MainWindow(int id)
         {
             InitializeComponent();
+            checkVaitro(id);
             getData();
             HienThiLoaiSach();
+            
+        }
+        public void checkVaitro(int id)
+        {
+            idNguoiDung = id;
+            var nguoidungDangNhap = db.NguoiDungs.Find(id);
+            if (nguoidungDangNhap.VaiTro == "NGUOIDUNG")
+            {
+                btnSua.IsEnabled = false;
+                btnThem.IsEnabled = false;
+                btnXoa.IsEnabled = false;
+            }
         }
         public void getData()
         {
@@ -117,6 +131,8 @@ namespace QLSachWPF
         private void btnThoat_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            LoginWindow loginWindow = new LoginWindow();
+            loginWindow.ShowDialog();
         }
         private void btnTaiLai_Click(object sender, RoutedEventArgs e)
         {

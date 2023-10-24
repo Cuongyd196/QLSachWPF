@@ -27,7 +27,13 @@
                     <DataGridTextColumn Width="100" Header="Đơn giá" Binding="{Binding DonGia}"/>
                     <DataGridTextColumn Width="100" Header="Số lượng" Binding="{Binding SoLuong}"/>
                     <DataGridTextColumn Width="100" Header="Loại sách" Binding="{Binding LoaiSach.TenLoaiSach}"/>
-                    <DataGridTextColumn Width="100" Header="Ảnh bìa" Binding="{Binding AnhBia}"/>
+                    <DataGridTemplateColumn Header="Ảnh bìa" Width="SizeToCells" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Width="80" Height="80" Source="{Binding AnhBia}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                 </DataGrid.Columns>
             </DataGrid>
             <StackPanel>
