@@ -41,6 +41,7 @@
                     <Button x:Name="btnThem" Content="Thêm" Width="100" Margin="5" Click="btnThem_Click"></Button>
                     <Button x:Name="btnSua" Content="Sửa" Width="100" Margin="5" Click="btnSua_Click"></Button>
                     <Button x:Name="btnXoa" Content="Xóa" Width="100" Margin="5" Click="btnXoa_Click"></Button>
+                    <Button x:Name="btnXuatExcel" Content="Xuất excel" Width="100" Margin="5" Click="btnXuatExcel_Click"></Button>
                     <Button x:Name="btnTaiLai" Content="Tải lại" Width="100" Margin="5" Click="btnTaiLai_Click"></Button>
                     <Button x:Name="btnThoat" Content="Thoát" Width="100" Margin="5" Click="btnThoat_Click"></Button>
                 </StackPanel>

@@ -33,7 +33,7 @@ namespace QLSachWPF
             var nguoiDung = db.NguoiDungs.SingleOrDefault(x =>x.TenNguoiDung.Equals(txtTenDNForm) && x.MatKhau.Equals(txtMatKhauForm));
             if (nguoiDung == null)
             {
-                MessageBox.Show("Tên tài người dùng hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Tên người dùng hoặc mật khẩu không chính xác", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {

@@ -17,6 +17,5 @@
             <PasswordBox  Margin="10" Width="150" x:Name="txtMK"></PasswordBox>
         </StackPanel>
         <Button x:Name="btnDangNhap" Margin="10"  Width="80" Content="Đăng nhập" Click="btnDangNhap_Click"></Button>
-
     </StackPanel>
 </Window>
